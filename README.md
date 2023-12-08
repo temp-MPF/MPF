@@ -36,10 +36,10 @@
 
 1. make directory
  
- ```bash
-mkdir results_single
-mkdir results_mpf
- ```
+    ```bash
+    mkdir results_single
+    mkdir results_mpf
+    ```
 
 3. train the single pattern model 
     - train the single pattern $p_5=(0.5\lambda ,2l)$ model on CSI100
