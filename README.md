@@ -34,7 +34,14 @@
 
 ## train the model 
 
-1. train the single pattern model 
+1. make directory
+ 
+ ```bash
+mkdir results_single
+mkdir results_mpf
+ ```
+
+3. train the single pattern model 
     - train the single pattern $p_5=(0.5\lambda ,2l)$ model on CSI100
     ```bash 
     nohup python -u train_single.py     --model 'single120'     --instruments 'csi100'     --out_dir './results_single'     --gpu_id 0     --repeat_times 10     --time_step 60     --n_features 6     --data_dir '~/.qlib/qlib_data/cn_data'     --pattern '[":"]'     --num_states 1     --dropout 0.1       --rnn_hidden_size 64     --tra_hidden_size 32     --length_after_resample '[120]'   --lr 0.001  --model_type "LSTM" > "results_single/single120_lr1e3_LSTM_num_states1"  2>&1 &
@@ -85,7 +92,7 @@
     nohup python -u train_single.py     --model 'single4060'     --instruments 'csi500'     --out_dir './results_single'     --gpu_id 1     --repeat_times 1     --time_step 60     --n_features 6     --data_dir '~/.qlib/qlib_data/cn_data'     --pattern '["-40:"]'     --num_states 3     --dropout 0.1    --rnn_hidden_size 64     --tra_hidden_size 32     --length_after_resample '[60]'  --lr 0.0001 --model_type "LSTM"  > "results_single/single4060_le4_LSTM_num_states3_csi500"  2>&1 &
         ```
 
-2. train the mpf
+4. train the mpf
     
     - train the mpf on CSI100
     ```bash
