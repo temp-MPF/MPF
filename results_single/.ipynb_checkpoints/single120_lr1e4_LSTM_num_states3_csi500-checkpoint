@@ -1,0 +1,4 @@
+nohup: 忽略输入
+[4413:MainThread](2023-12-06 11:20:50,939) INFO - qlib.Initialization - [config.py:413] - default_conf: client.
+[4413:MainThread](2023-12-06 11:21:16,920) INFO - qlib.Initialization - [__init__.py:74] - qlib successfully initialized based on client settings.
+[4413:MainThread](2023-12-06 11:21:16,920) INFO - qlib.Initialization - [__init__.py:76] - data_path={'__DEFAULT_FREQ': PosixPath('/home/nlp/spxdata2t/.qlib/qlib_data/cn_data')}
